@@ -7,6 +7,5 @@
         <p>Loading comments...</p>
       </template>
     </client-only>
-   
   </div>
 </template>

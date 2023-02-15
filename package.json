@@ -13,6 +13,8 @@
     "nuxt": "^3.2.0"
   },
   "dependencies": {
-    "@types/node": "^18.13.0"
+    "@types/node": "^18.13.0",
+    "@vee-validate/rules": "^4.7.4",
+    "vee-validate": "^4.7.4"
   }
 }
