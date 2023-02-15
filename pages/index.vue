@@ -8,11 +8,9 @@
 </script>
 
 <template>
-  <nuxt-layout name="default">
-    <div>
-      <div>
-        <covid-list></covid-list>
-      </div>
-    </div>
+  <nuxt-layout name="login">
+      <covid-list v-bind="{
+        item: store.item
+      }"></covid-list>
   </nuxt-layout>
 </template>
