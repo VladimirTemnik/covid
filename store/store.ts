@@ -1,10 +1,10 @@
 import { defineStore } from 'pinia'
 import { ref } from "vue";
-import { ICovid } from "@/store/types";
 import { service } from "@/api/service";
+import { ICovid, ICovidResponse } from "@/api/types";
 
 export const useStore = defineStore('store', () => {
-  const item = ref<ICovid | null>(null)
+  const item = ref<ICovidResponse | null>(null)
   const authorized = ref<boolean>(false)
   const loading = ref<boolean>(false)
 
@@ -24,7 +24,7 @@ export const useStore = defineStore('store', () => {
       throw error.value
     }
 
-    item.value = data.value as ICovid
+    item.value = data.value as ICovidResponse || null
 
     loading.value = pending.value
   }
