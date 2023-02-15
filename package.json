@@ -7,12 +7,16 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "dependencies": {
+    "pinia": "^2.0.30"
+  },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.4.0",
     "@pinia/nuxt": "^0.4.6",
+    "@types/node": "^18.13.0",
     "nuxt": "^3.2.0"
   },
-  "dependencies": {
-    "@types/node": "^18.13.0"
+  "overrides": {
+    "vue": "latest"
   }
 }

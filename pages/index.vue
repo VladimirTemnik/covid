@@ -1,15 +1,18 @@
 <script setup lang="ts">
-  import LoginCard from "@/components/LoginCard.vue"
+  import { useStore } from "@/store/store";
+  import CovidList from "@/components/CovidList.vue"
+
+  const store = useStore()
+
+  await store.getCovid()
 </script>
 
 <template>
   <nuxt-layout name="default">
     <div>
-      <login-card></login-card>
+      <div>
+        <covid-list></covid-list>
+      </div>
     </div>
   </nuxt-layout>
 </template>
-
-<style scoped>
-
-</style>
