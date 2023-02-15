@@ -1,10 +1,7 @@
 <template>
     <form>
       <fieldset>
-        <label></label>
-        <input>
-        <label></label>
-        <input>
+          
       </fieldset>
     </form>
 </template>
