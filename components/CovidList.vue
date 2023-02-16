@@ -16,36 +16,36 @@ const item = ref<ICovid | null>(store.item?.data || null)
 </script>
 
 <template>
-  <section>
-    <header>
-      <h5> 
-        Covid 19 
+  <section class="flex flex-col items-center px-10 pt-5">
+    <header  class="font-sans text-xl mb-2 text-indigo-400">
+      <h5>
+        Covid 19
       </h5>
     </header>
-    <main>
-      <table>
+    <main class="w-full bg-gray-400 mb-5 rounded-md">
+      <table class="border border-black w-full font-sans text-md ">
         <thead>
-          <tr>
+          <tr class="">
             <template v-for="header of headers">
-                <th> 
-                  {{ header }} 
+                <th class="border-2 border-black font-sans text-md">
+                  {{ header }}
                 </th>
             </template>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr class="text-center">
             <template v-if="item" v-for="header of headers">
-              <th> 
-                {{ item[header] }} 
-              </th>
+              <td class="border-2 border-black font-sans text-md ">
+                {{ item[header] }}
+              </td>
             </template>
           </tr>
         </tbody>
       </table>
     </main>
-    <footer>
-      <button> refresh </button>
+    <footer class="w-1/3 bg-indigo-400 flex justify-center font-sans text-md rounded-md">
+      <button class=""> refresh </button>
     </footer>
   </section>
 </template>
