@@ -1,16 +1,14 @@
 <script setup lang="ts">
-  import { useStore } from "@/store/store";
+  import { useCovidStore } from "~~/store/covid";
   import CovidList from "@/components/CovidList.vue"
 
-  const store = useStore()
+  const store = useCovidStore()
 
-  await store.getCovid()
+  await store.getCovidReports()
 </script>
 
 <template>
   <nuxt-layout name="login">
-      <covid-list v-bind="{
-        item: store.item
-      }"></covid-list>
+      <covid-list></covid-list>
   </nuxt-layout>
 </template>
