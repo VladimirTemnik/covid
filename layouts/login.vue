@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container min-h-screen">
     <client-only>
       <slot></slot>
       <template v-slot:fallback>

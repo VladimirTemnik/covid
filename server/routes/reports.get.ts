@@ -15,6 +15,6 @@ export default defineEventHandler(async (event) => {
       message: 'Not Found'
     })
   }
-
+  console.warn(data)
   return data
 })
